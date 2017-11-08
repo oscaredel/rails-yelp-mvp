@@ -1,2 +1,26 @@
 <h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <p>Please review the errors below:</p>
+        <ul>
+          <% @review.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <!-- NOW ONE: simple_form_for -->
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit "Add this review", class: 'btn btn-primary' %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
