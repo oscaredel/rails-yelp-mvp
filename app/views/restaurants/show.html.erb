@@ -1,0 +1,10 @@
+<h1>Restaurants#show</h1>
+
+<ul>
+  <li><strong>Name</strong> <%= @restaurant.name %></li>
+  <li><strong>Address</strong> <%= @restaurant.address %></li>
+  <li><strong>Category</strong> <%= @restaurant.category %></li>
+</ul>
+<%#= @restaurant %><!-- only for debugging purposes -->
+
+<%= link_to "Back to all restaurants", restaurants_path %>

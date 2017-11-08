@@ -16,7 +16,7 @@ gem 'puma', '~> 3.0'
 
 
 # OWN GEMS
-
+gem 'faker'
 
 # ASSETS
 gem 'sass-rails', '~> 5.0'

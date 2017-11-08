@@ -1,0 +1,12 @@
+<h1>Restaurants#index</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %><!-- no puts -->
+    <li>
+      <strong>
+        <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      </strong>
+      <%= restaurant.address %>
+    </li>
+  <% end %><!-- no puts -->
+</ul>
